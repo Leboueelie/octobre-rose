@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://octobre-rose.pages.dev/sitemap.xml
+Sitemap: https://octobre-rose.leboueelie.workers.dev/sitemap.xml

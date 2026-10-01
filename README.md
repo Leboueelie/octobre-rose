@@ -67,14 +67,17 @@ python3 -m http.server 8000
 # puis http://localhost:8000
 ```
 
-## Déploiement (Cloudflare Pages)
+## Déploiement (Cloudflare)
 
 Le site est statique : aucun build n'est nécessaire.
+
+**Déploiement actuel** : projet Cloudflare Worker avec assets statiques →
+`https://octobre-rose.leboueelie.workers.dev`
 
 ### Option A — Tableau de bord (la plus simple)
 
 1. Se connecter sur [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Upload assets** (déploiement direct)
-2. Nommer le projet : `octobre-rose` (le sous-domaine sera `octobre-rose.pages.dev`)
+2. Nommer le projet : `octobre-rose`
 3. Déposer le **contenu de ce dossier** (pas le dossier `.git`) → **Deploy site**
 4. Chaque mise à jour = re-déposer les fichiers ou **Create deployment**
 
@@ -103,8 +106,8 @@ npx wrangler pages deploy . --project-name=octobre-rose
 4. Chaque `git push` redéploie automatiquement le site
 
 > Après le premier déploiement, mettez à jour l'URL finale dans `robots.txt` et `sitemap.xml`
-> (`https://octobre-rose.pages.dev/` ou votre domaine personnalisé).
-> Domaine personnalisé : **Custom domains** dans les réglages du projet Pages.
+> (actuellement `https://octobre-rose.leboueelie.workers.dev/`, ou votre domaine personnalisé).
+> Domaine personnalisé : **Custom domains** dans les réglages du projet.
 
 Alternatives : Netlify, Vercel, GitHub Pages (glisser-déposer ou Git).
 
